@@ -8,10 +8,10 @@ npm: Npm
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.npm](https://galaxy.ansible.com/devops-toolbox.npm)
+[https://galaxy.ansible.com/devopstoolbox.npm](https://galaxy.ansible.com/devopstoolbox.npm)
 
 ```bash
-ansible-galaxy install devops-toolbox.npm
+ansible-galaxy install devopstoolbox.npm
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: npm is configured
       import_role:
-        name: devops-toolbox.npm
+        name: devopstoolbox.npm
       vars:
         npm_packages_state: present
         npm_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
