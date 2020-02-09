@@ -1,0 +1,27 @@
+---
+# Install npm packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ npm_packages_remove }}"
+    state: absent
+  become: true
+  when: npm_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ npm_packages_repos }}"
+    state: "{{ npm_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ npm_packages_prereq }}"
+    state: "{{ npm_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ npm_packages_install }}"
+    state: "{{ npm_packages_state }}"
+  become: true

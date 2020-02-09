@@ -1,0 +1,19 @@
+---
+# defaults file for npm
+
+npm_packages_state: present
+npm_remove_packages: true
+npm_enable_service: true
+npm_enable_selinux: true
+npm_copy_templates: true
+npm_firewall_configure: true
+npm_firewall_rules:
+  - service: ssh
+  - port: 3389
+npm_users:
+  - user: devops
+    group: docker
+npm_selinux_booleans:
+  - name: ftp_home_dir
+    state: true
+    persistent: true
